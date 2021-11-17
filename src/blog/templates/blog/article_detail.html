@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Blog Page</h1>
+    <p>{{object.title}}</p>
+    <p>
+        {% if object.content != None and object.content != '' %}
+            {{ object.content }}
+        {% else %}
+            <span style="color: #f2012a;" >No Content Available</span>
+        {% endif %}
+    </p>
+{% endblock %}
